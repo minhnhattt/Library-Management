@@ -77,11 +77,6 @@ if(isset($_POST['signup']))
             <div class="row pad-botm">
                 <div class="col-md-12">
                     <h4 class="header-line">Đăng ký tài khoản người dùng</h4>
-<<<<<<< HEAD
-=======
-                    
-
->>>>>>> 51be8e038d128e320052f58dc70544f48aca7b92
                 </div>
             </div>
             <div class="row">
