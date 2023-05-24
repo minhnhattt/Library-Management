@@ -53,7 +53,7 @@
                             <li><a href="adminlogin.php">Đăng nhập quản trị</a></li>
                             <li><a href="signup.php">Đăng ký người dùng</a></li>
                             <li><a href="index.php">Đăng nhập người dùng</a></li>
-                            <li><a href="index.php">Đăng nhập Nhân Viên</a></li>
+                            <li><a href="login-nhanvien.php">Đăng nhập Nhân Viên</a></li>
 
                         </ul>
                     </div>

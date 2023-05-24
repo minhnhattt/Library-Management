@@ -83,7 +83,7 @@ if(isset($_POST['signup']))
                 <div class="col-md-9 col-md-offset-1">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-                            FORM ĐĂNG KÝ
+                             ĐĂNG KÝ
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
