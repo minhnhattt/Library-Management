@@ -58,7 +58,7 @@
                             </li>
                              <li><a href="reg-students.php">Quản lý người mượn</a></li>
                     
-                            <li><a href="change-password.php">Change Password</a></li>
+                            <li><a href="change-password.php">Đổi mật khẩu</a></li>
                         </ul>
                     </div>
                 </div>
