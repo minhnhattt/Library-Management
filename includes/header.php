@@ -16,7 +16,7 @@
 {
 ?> 
             <div class="right-div">
-                <a href="logout.php" class="btn btn-danger pull-right">LOG ME OUT</a>
+                <a href="logout.php" class="btn btn-danger pull-right">Đăng xuất</a>
             </div>
             <?php }?>
         </div>
@@ -31,17 +31,17 @@
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
-                            <li><a href="dashboard.php" class="menu-top-active">DASHBOARD</a></li>
+                            <li><a href="dashboard.php" class="menu-top-active">Trang chủ</a></li>
                            
                           
    <li>
-                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown"> Account <i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown"> Quản lý tài khoản <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="my-profile.php">My Profile</a></li>
-                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="change-password.php">Change Password</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="my-profile.php">Thông tin cá nhân</a></li>
+                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="change-password.php">Đổi mật khẩu</a></li>
                                 </ul>
                             </li>
-                            <li><a href="issued-books.php">Issued Books</a></li>
+                            <li><a href="issued-books.php">Sách đã mượn</a></li>
                           
 
                         </ul>
@@ -59,10 +59,9 @@
                     <div class="navbar-collapse collapse ">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">                        
                           
-  <li><a href="adminlogin.php">Admin Login</a></li>
-                            <li><a href="signup.php">User Signup</a></li>
-                             <li><a href="index.php">User Login</a></li>
-                          
+                            <li><a href="adminlogin.php">Admin</a></li>
+                            <li><a href="signup.php">Đăng ký</a></li>
+                            <li><a href="index.php">Đăng nhập</a></li>
 
                         </ul>
                     </div>

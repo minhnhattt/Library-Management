@@ -34,7 +34,7 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Hệ thống quản lý thư viện trực tuyến</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -54,7 +54,7 @@ if (isset($_POST['login'])) {
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-                    <h4 class="header-line">FORM ĐĂNG NHẬP QUẢN TRỊ</h4>
+                    <h4 class="header-line">ĐĂNG NHẬP QUẢN TRỊ VIÊN</h4>
                 </div>
             </div>
 
@@ -63,12 +63,12 @@ if (isset($_POST['login'])) {
                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            FORM ĐĂNG NHẬP
+                            ĐĂNG NHẬP
                         </div>
                         <div class="panel-body">
                             <form role="form" method="post">
                                 <div class="form-group">
-                                    <label>Nhập Tên đăng nhập</label>
+                                    <label>Tên đăng nhập</label>
                                     <input class="form-control" type="text" name="username" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
