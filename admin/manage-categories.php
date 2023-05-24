@@ -49,7 +49,7 @@ header('location:manage-categories.php');
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">Manage Categories</h4>
+                <h4 class="header-line">Quản lý danh mục</h4>
     </div>
      <div class="row">
     <?php if($_SESSION['error']!="")
@@ -104,19 +104,19 @@ header('location:manage-categories.php');
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                           Categories Listing
+                           Danh sách danh mục
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Category</th>
-                                            <th>Status</th>
-                                            <th>Creation Date</th>
-                                            <th>Updation Date</th>
-                                            <th>Action</th>
+                                            <th>id</th>
+                                            <th>Danh mục</th>
+                                            <th>Trạng Thái</th>
+                                            <th>Ngày Tạo</th>
+                                            <th>Ngày cập Nhật</th>
+                                            <th>Edit</th>
                                         </tr>
                                     </thead>
                                     <tbody>

@@ -9,3 +9,4 @@
         </div>
     </section>
     CÁI TREN LÀ TRONG TRƯỜNG HỢP CÓ NHIỀU FILE SỬA THÌ BẤM STAGE CHANGE ALL CÒN CÁI DƯỚI THÌ 1 FILE
+    SYNC CHANGE LÀ NÓ TỰ PULL TỰ PUSH CHO M
