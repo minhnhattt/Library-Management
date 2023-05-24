@@ -13,7 +13,11 @@
 
         <?php if($_SESSION['login']) { ?> 
             <div class="right-div">
+<<<<<<< HEAD
+                <a href="logout.php" class="btn btn-danger pull-right">Đăng xuất</a>
+=======
                 <a href="logout.php" class="btn btn-danger pull-right">ĐĂNG XUẤT</a>
+>>>>>>> a160ee96249dd6c0d6e567ffe25d6c5623be270d
             </div>
         <?php } ?>
     </div>
@@ -27,6 +31,21 @@
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
+                            <li><a href="dashboard.php" class="menu-top-active">Trang chủ</a></li>
+                           
+                          
+   <li>
+                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown"> Quản lý tài khoản <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="my-profile.php">Thông tin cá nhân</a></li>
+                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="change-password.php">Đổi mật khẩu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="issued-books.php">Sách đã mượn</a></li>
+                          
+
+=======
                             <li><a href="dashboard.php" class="menu-top-active">BẢNG ĐIỀU KHIỂN</a></li>
                            
                             <li>
@@ -37,6 +56,7 @@
                                 </ul>
                             </li>
                             <li><a href="issued-books.php">Sách đã mượn</a></li>
+>>>>>>> a160ee96249dd6c0d6e567ffe25d6c5623be270d
                         </ul>
                     </div>
                 </div>
@@ -48,12 +68,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+<<<<<<< HEAD
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">                        
+                          
+                            <li><a href="adminlogin.php">Admin</a></li>
+                            <li><a href="signup.php">Đăng ký</a></li>
+                            <li><a href="index.php">Đăng nhập</a></li>
+=======
                     <div class="navbar-collapse collapse">
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
                             <li><a href="adminlogin.php">Đăng nhập quản trị</a></li>
                             <li><a href="signup.php">Đăng ký người dùng</a></li>
                             <li><a href="index.php">Đăng nhập người dùng</a></li>
+<<<<<<< HEAD
                             <li><a href="login-nhanvien.php">Đăng nhập Nhân Viên</a></li>
+=======
+                            <li><a href="index.php">Đăng nhập Nhân Viên</a></li>
+>>>>>>> a160ee96249dd6c0d6e567ffe25d6c5623be270d
+>>>>>>> 93b77902936635608fdf8b287bc050cb32d1113c
 
                         </ul>
                     </div>

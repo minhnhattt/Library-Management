@@ -14,7 +14,7 @@ else{?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System | User Dash Board</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Trang chủ Người dùng</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -33,7 +33,7 @@ else{?>
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">ADMIN DASHBOARD</h4>
+                <h4 class="header-line">Trang chủ</h4>
                 
                             </div>
 
@@ -58,7 +58,7 @@ $issuedbooks=$query1->rowCount();
 ?>
 
                             <h3><?php echo htmlentities($issuedbooks);?> </h3>
-                            Book Issued
+                            Sách đã mượn
                         </div>
                     </div>
              
@@ -77,7 +77,7 @@ $returnedbooks=$query2->rowCount();
 ?>
 
                             <h3><?php echo htmlentities($returnedbooks);?></h3>
-                          Books Not Returned Yet
+                          Sách chưa trả
                         </div>
                     </div>
         </div>

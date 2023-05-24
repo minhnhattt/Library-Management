@@ -59,7 +59,11 @@ if(isset($_POST['login'])) {
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
+<<<<<<< HEAD
+                    <h4 class="header-line">NGƯỜI DÙNG ĐĂNG NHẬP</h4>
+=======
                     <h4 class="header-line"> ĐĂNG NHẬP</h4>
+>>>>>>> a160ee96249dd6c0d6e567ffe25d6c5623be270d
                 </div>
             </div>
              
@@ -73,7 +77,7 @@ if(isset($_POST['login'])) {
                         <div class="panel-body">
                             <form role="form" method="post">
                                 <div class="form-group">
-                                    <label>Nhập Email</label>
+                                    <label>Email</label>
                                     <input class="form-control" type="text" name="emailid" required autocomplete="off" />
                                 </div>
                                 <div class="form-group">
