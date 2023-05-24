@@ -59,7 +59,7 @@ if(isset($_POST['login'])) {
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-                    <h4 class="header-line">FORM ĐĂNG NHẬP</h4>
+                    <h4 class="header-line"> ĐĂNG NHẬP</h4>
                 </div>
             </div>
              
@@ -68,7 +68,7 @@ if(isset($_POST['login'])) {
                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            FORM ĐĂNG NHẬP
+                            ĐĂNG NHẬP
                         </div>
                         <div class="panel-body">
                             <form role="form" method="post">
