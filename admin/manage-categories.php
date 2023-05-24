@@ -28,7 +28,7 @@ header('location:manage-categories.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Web quản lý thư viện | Quản lý Danh mục</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Quản lý Danh mục</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -49,7 +49,11 @@ header('location:manage-categories.php');
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
+<<<<<<< HEAD
+                <h4 class="header-line">Quản lý Danh mục sách</h4>
+=======
                 <h4 class="header-line">Quản lý danh mục</h4>
+>>>>>>> 3b660723ca12e1d2340e3b04f14998f2ca4e2fa9
     </div>
      <div class="row">
     <?php if($_SESSION['error']!="")
@@ -104,19 +108,32 @@ header('location:manage-categories.php');
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
+<<<<<<< HEAD
+                           Quản lý danh mục
+=======
                            Danh sách danh mục
+>>>>>>> 3b660723ca12e1d2340e3b04f14998f2ca4e2fa9
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
+<<<<<<< HEAD
+                                            <th>#</th>
+                                            <th>Tên danh mục</th>
+                                            <th>Trạng thái</th>
+                                            <th>Ngày thêm</th>
+                                            <th>Ngày sửa</th>
+                                            <th>Chức năng</th>
+=======
                                             <th>id</th>
                                             <th>Danh mục</th>
                                             <th>Trạng Thái</th>
                                             <th>Ngày Tạo</th>
                                             <th>Ngày cập Nhật</th>
                                             <th>Edit</th>
+>>>>>>> 3b660723ca12e1d2340e3b04f14998f2ca4e2fa9
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -141,8 +158,8 @@ foreach($results as $result)
                                             <td class="center"><?php echo htmlentities($result->UpdationDate);?></td>
                                             <td class="center">
 
-                                            <a href="edit-category.php?catid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Edit</button> 
-                                          <a href="manage-categories.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</button>
+                                            <a href="edit-category.php?catid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Sửa</button> 
+                                          <a href="manage-categories.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Xoá</button>
                                             </td>
                                         </tr>
  <?php $cnt=$cnt+1;}} ?>                                      
