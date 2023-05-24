@@ -49,11 +49,9 @@ header('location:manage-categories.php');
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-<<<<<<< HEAD
+
                 <h4 class="header-line">Quản lý Danh mục sách</h4>
-=======
-                <h4 class="header-line">Quản lý danh mục</h4>
->>>>>>> 3b660723ca12e1d2340e3b04f14998f2ca4e2fa9
+
     </div>
      <div class="row">
     <?php if($_SESSION['error']!="")
