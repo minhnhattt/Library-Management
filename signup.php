@@ -77,8 +77,11 @@ if(isset($_POST['signup']))
             <div class="row pad-botm">
                 <div class="col-md-12">
                     <h4 class="header-line">Đăng ký tài khoản người dùng</h4>
+<<<<<<< HEAD
+=======
                     
 
+>>>>>>> 51be8e038d128e320052f58dc70544f48aca7b92
                 </div>
             </div>
             <div class="row">
@@ -108,6 +111,8 @@ if(isset($_POST['signup']))
                                 <div class="form-group">
                                     <label>Xác nhận mật khẩu</label>
                                     <input class="form-control" type="password" name="confirmpassword" autocomplete="off" required />
+<<<<<<< HEAD
+=======
                                     <label>Nhập Họ và Tên</label>
                                     <input class="form-control" type="text" name="hoTen" autocomplete="off" required />
                                 </div>
@@ -126,6 +131,7 @@ if(isset($_POST['signup']))
                                 <div class="form-group">
                                     <label>Xác nhận Mật khẩu</label>
                                     <input class="form-control" type="password" name="xacNhanMatKhau" autocomplete="off" required />
+>>>>>>> 51be8e038d128e320052f58dc70544f48aca7b92
                                 </div>                               
                                 <button type="submit" name="signup" class="btn btn-danger" id="submit">Đăng ký ngay</button>
                             </form>
