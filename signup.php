@@ -78,29 +78,19 @@ if(isset($_POST['signup']))
                 <div class="col-md-12">
 <<<<<<< HEAD
                     <h4 class="header-line">Đăng ký tài khoản người dùng</h4>
-=======
                     <h4 class="header-line">Đăng ký Người dùng</h4>
->>>>>>> a160ee96249dd6c0d6e567ffe25d6c5623be270d
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-9 col-md-offset-1">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-<<<<<<< HEAD
-                             ĐĂNG KÝ
-=======
-<<<<<<< HEAD
-                            Thông tin đăng ký
-=======
-                            FORM ĐĂNG KÝ
->>>>>>> a160ee96249dd6c0d6e567ffe25d6c5623be270d
->>>>>>> 93b77902936635608fdf8b287bc050cb32d1113c
+
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
                                 <div class="form-group">
-<<<<<<< HEAD
                                     <label>Họ và tên</label>
                                     <input class="form-control" type="text" name="fullanme" autocomplete="off" required />
                                 </div>

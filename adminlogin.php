@@ -54,11 +54,10 @@ if (isset($_POST['login'])) {
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-<<<<<<< HEAD
+
                     <h4 class="header-line">ĐĂNG NHẬP QUẢN TRỊ VIÊN</h4>
-=======
-                    <h4 class="header-line">ĐĂNG NHẬP QUẢN TRỊ</h4>
->>>>>>> a160ee96249dd6c0d6e567ffe25d6c5623be270d
+
+                    
                 </div>
             </div>
 
