@@ -18,7 +18,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System | Manage Issued Books</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Quản lý Phiếu mượn</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -39,7 +39,7 @@ else{
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">Manage Issued Books</h4>
+                <h4 class="header-line">Quản lý Phiếu mượn</h4>
     </div>
      <div class="row">
     <?php if($_SESSION['error']!="")
@@ -85,7 +85,7 @@ else{
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                          Issued Books 
+                          Phiếu mượn 
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -93,12 +93,12 @@ else{
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Student Name</th>
-                                            <th>Book Name</th>
+                                            <th>Tên người mượn</th>
+                                            <th>Tên sách</th>
                                             <th>ISBN </th>
-                                            <th>Issued Date</th>
-                                            <th>Return Date</th>
-                                            <th>Action</th>
+                                            <th>Ngày mượn</th>
+                                            <th>Ngày trả</th>
+                                            <th>Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -128,7 +128,7 @@ foreach($results as $result)
                                             ?></td>
                                             <td class="center">
 
-                                            <a href="update-issue-bookdeails.php?rid=<?php echo htmlentities($result->rid);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Edit</button> 
+                                            <a href="update-issue-bookdeails.php?rid=<?php echo htmlentities($result->rid);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Sửa</button> 
                                          
                                             </td>
                                         </tr>
