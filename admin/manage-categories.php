@@ -108,32 +108,22 @@ header('location:manage-categories.php');
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-<<<<<<< HEAD
+
                            Quản lý danh mục
-=======
-                           Danh sách danh mục
->>>>>>> 3b660723ca12e1d2340e3b04f14998f2ca4e2fa9
+
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-<<<<<<< HEAD
                                             <th>#</th>
                                             <th>Tên danh mục</th>
                                             <th>Trạng thái</th>
                                             <th>Ngày thêm</th>
                                             <th>Ngày sửa</th>
                                             <th>Chức năng</th>
-=======
-                                            <th>id</th>
-                                            <th>Danh mục</th>
-                                            <th>Trạng Thái</th>
-                                            <th>Ngày Tạo</th>
-                                            <th>Ngày cập Nhật</th>
-                                            <th>Edit</th>
->>>>>>> 3b660723ca12e1d2340e3b04f14998f2ca4e2fa9
+
                                         </tr>
                                     </thead>
                                     <tbody>
