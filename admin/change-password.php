@@ -1,38 +1,35 @@
-<?php {
+<?php
 session_start();
 include('includes/config.php');
 error_reporting(0);
-if(strlen($_SESSION['alogin'])==0)
-{   
+
+if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
-}
-else{ 
-    if(isset($_POST['change']))
-    {
-        $password=md5($_POST['password']);
-        $newpassword=md5($_POST['newpassword']);
-        $username=$_SESSION['alogin'];
-        $sql ="SELECT Password FROM admin WHERE UserName=:username AND Password=:password";
-        $query= $dbh->prepare($sql);
+} else {
+    if (isset($_POST['change'])) {
+        $password = md5($_POST['password']);
+        $newpassword = md5($_POST['newpassword']);
+        $username = $_SESSION['alogin'];
+        $sql = "SELECT Password FROM admin WHERE UserName=:username AND Password=:password";
+        $query = $dbh->prepare($sql);
         $query->bindParam(':username', $username, PDO::PARAM_STR);
         $query->bindParam(':password', $password, PDO::PARAM_STR);
         $query->execute();
         $results = $query->fetchAll(PDO::FETCH_OBJ);
-        if($query->rowCount() > 0)
-        {
-            $con="UPDATE admin SET Password=:newpassword WHERE UserName=:username";
+        if ($query->rowCount() > 0) {
+            $con = "UPDATE admin SET Password=:newpassword WHERE UserName=:username";
             $chngpwd1 = $dbh->prepare($con);
             $chngpwd1->bindParam(':username', $username, PDO::PARAM_STR);
             $chngpwd1->bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
             $chngpwd1->execute();
-            $msg="Mật khẩu của bạn đã được thay đổi thành công";
-        }
-        else {
-            $error="Mật khẩu hiện tại của bạn không đúng";  
+            $msg = "Mật khẩu của bạn đã được thay đổi thành công";
+        } else {
+            $error = "Mật khẩu hiện tại của bạn không đúng";
         }
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -40,7 +37,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Hệ thống quản lý thư viện trực tuyến | </title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Đổi mật khẩu</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -68,11 +65,10 @@ else{
         }
     </style>
 </head>
+
 <script type="text/javascript">
-    function valid()
-    {
-        if(document.chngpwd.newpassword.value!= document.chngpwd.confirmpassword.value)
-        {
+    function valid() {
+        if (document.chngpwd.newpassword.value != document.chngpwd.confirmpassword.value) {
             alert("Mật khẩu mới và Xác nhận mật khẩu không khớp!!");
             document.chngpwd.confirmpassword.focus();
             return false;
@@ -82,9 +78,8 @@ else{
 </script>
 
 <body>
-    <!------MENU SECTION START-->
     <?php include('includes/header.php');?>
-    <!-- MENU SECTION END-->
+
     <div class="content-wrapper">
         <div class="container">
             <div class="row pad-botm">
@@ -92,9 +87,13 @@ else{
                     <h4 class="header-line">Thay đổi mật khẩu người dùng</h4>
                 </div>
             </div>
-            <?php if($error){?><div class="errorWrap"><strong>LỖI</strong>:<?php echo htmlentities($error); ?> </div><?php } 
-            else if($msg){?><div class="succWrap"><strong>THÀNH CÔNG</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
-            <!--LOGIN PANEL START-->           
+
+            <?php if ($error) { ?>
+                <div class="errorWrap"><strong>LỖI</strong>:<?php echo htmlentities($error); ?> </div>
+            <?php } else if ($msg) { ?>
+                <div class="succWrap"><strong>THÀNH CÔNG</strong>:<?php echo htmlentities($msg); ?> </div>
+            <?php } ?>
+
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
                     <div class="panel panel-info">
@@ -112,7 +111,7 @@ else{
                                     <input class="form-control" type="password" name="newpassword" autocomplete="off" required  />
                                 </div>
                                 <div class="form-group">
-                                    <label>Xác nhận mật khẩu</label>
+                                    <label>Xác nhận mật khẩu mới</label>
                                     <input class="form-control"  type="password" name="confirmpassword" autocomplete="off" required  />
                                 </div>
                                 <button type="submit" name="change" class="btn btn-info">Thay đổi</button> 
@@ -121,17 +120,12 @@ else{
                     </div>
                 </div>
             </div>  
-            <!---LOGIN PANEL END-->            
         </div>
     </div>
-    <!-- CONTENT-WRAPPER SECTION END-->
+
     <?php include('includes/footer.php');?>
-    <!-- FOOTER SECTION END-->
     <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP SCRIPTS  -->
     <script src="assets/js/bootstrap.js"></script>
-    <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/custom.js"></script>
 </body>
 </html>
-<?php } ?>

@@ -18,7 +18,7 @@ else{
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
-    <title>Hệ thống quản lý thư viện trực tuyến | Bảng điều khiển quản trị</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Trang chủ</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -27,7 +27,6 @@ else{
     <link href="assets/css/style.css" rel="stylesheet" />
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-
 </head>
 <body>
     <!------MENU SECTION START-->
