@@ -18,7 +18,7 @@ else{
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
-    <title>Hệ thống quản lý thư viện trực tuyến | Bảng điều khiển quản trị</title>
+    <title>Hệ thống quản lý thư viện trực tuyến | Bảng điều khiển Nhân viên</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -37,7 +37,7 @@ else{
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-                    <h4 class="header-line">BẢNG ĐIỀU KHIỂN QUẢN TRỊ</h4>
+                    <h4 class="header-line">BẢNG ĐIỀU KHIỂN Nhân Viên</h4>
                 </div>
             </div>
             <div class="row">
