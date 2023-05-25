@@ -2,34 +2,31 @@
 session_start();
 error_reporting(0);
 include('includes/config.php');
-if(strlen($_SESSION['alogin'])==0)
-{   
-    header('location:index.php');
-}
-else{ 
 
-if(isset($_POST['create']))
-{
-    $category=$_POST['category'];
-    $status=$_POST['status'];
-    $sql="INSERT INTO  tblcategory(CategoryName,Status) VALUES(:category,:status)";
-    $query = $dbh->prepare($sql);
-    $query->bindParam(':category',$category,PDO::PARAM_STR);
-    $query->bindParam(':status',$status,PDO::PARAM_STR);
-    $query->execute();
-    $lastInsertId = $dbh->lastInsertId();
-    if($lastInsertId)
-    {
-        $_SESSION['msg']="Thêm danh mục thành công";
-        header('location:manage-categories.php');
-    }
-    else 
-    {
-        $_SESSION['error']="Đã xảy ra lỗi. Vui lòng thử lại";
-        header('location:manage-categories.php');
+if (strlen($_SESSION['alogin']) == 0) {
+    header('location:index.php');
+} else {
+
+    if (isset($_POST['create'])) {
+        $category = $_POST['category'];
+        $status = $_POST['status'];
+        $sql = "INSERT INTO tblcategory(CategoryName,Status) VALUES(:category,:status)";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':category', $category, PDO::PARAM_STR);
+        $query->bindParam(':status', $status, PDO::PARAM_STR);
+        $query->execute();
+        $lastInsertId = $dbh->lastInsertId();
+        if ($lastInsertId) {
+            $_SESSION['msg'] = "Thêm danh mục thành công";
+            header('location:manage-categories.php');
+        } else {
+            $_SESSION['error'] = "Đã xảy ra lỗi. Vui lòng thử lại";
+            header('location:manage-categories.php');
+        }
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,7 +34,7 @@ if(isset($_POST['create']))
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Hệ thống quản lý thư viện trực tuyến | Thêm danh mục</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Thêm danh mục</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -48,9 +45,10 @@ if(isset($_POST['create']))
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
 </head>
+
 <body>
     <!------MENU SECTION START-->
-    <?php include('includes/header.php');?>
+    <?php include('includes/header.php'); ?>
     <!-- MENU SECTION END-->
     <div class="content-wrapper">
         <div class="container">
@@ -93,7 +91,7 @@ if(isset($_POST['create']))
         </div>
     </div>
     <!-- CONTENT-WRAPPER SECTION END-->
-    <?php include('includes/footer.php');?>
+    <?php include('includes/footer.php'); ?>
     <!-- FOOTER SECTION END-->
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
@@ -104,4 +102,3 @@ if(isset($_POST['create']))
     <script src="assets/js/custom.js"></script>
 </body>
 </html>
-<?php } ?>

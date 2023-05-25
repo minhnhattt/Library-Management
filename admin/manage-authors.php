@@ -113,7 +113,6 @@ header('location:manage-authors.php');
                                         <tr>
                                             <th>#</th>
                                             <th>Tên tác giả</th>
-                                         
                                             <th>Ngày thêm</th>
                                             <th>Ngày sửa gần nhất</th>
                                             <th>Chức năng</th>

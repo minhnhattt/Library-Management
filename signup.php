@@ -77,18 +77,13 @@ if(isset($_POST['signup']))
             <div class="row pad-botm">
                 <div class="col-md-12">
                     <h4 class="header-line">Đăng ký tài khoản người dùng</h4>
-<<<<<<< HEAD
-=======
-                    
-
->>>>>>> 51be8e038d128e320052f58dc70544f48aca7b92
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-9 col-md-offset-1">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-
+                            Đăng Ký
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
@@ -111,27 +106,6 @@ if(isset($_POST['signup']))
                                 <div class="form-group">
                                     <label>Xác nhận mật khẩu</label>
                                     <input class="form-control" type="password" name="confirmpassword" autocomplete="off" required />
-<<<<<<< HEAD
-=======
-                                    <label>Nhập Họ và Tên</label>
-                                    <input class="form-control" type="text" name="hoTen" autocomplete="off" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Số Điện Thoại:</label>
-                                    <input class="form-control" type="text" name="soDienThoai" maxlength="10" autocomplete="off" required />
-                                </div>       
-                                <div class="form-group">
-                                    <label>Nhập Email</label>
-                                    <input class="form-control" type="email" name="email" autocomplete="off" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Nhập Mật khẩu</label>
-                                    <input class="form-control" type="password" name="matKhau" autocomplete="off" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Xác nhận Mật khẩu</label>
-                                    <input class="form-control" type="password" name="xacNhanMatKhau" autocomplete="off" required />
->>>>>>> 51be8e038d128e320052f58dc70544f48aca7b92
                                 </div>                               
                                 <button type="submit" name="signup" class="btn btn-danger" id="submit">Đăng ký ngay</button>
                             </form>
