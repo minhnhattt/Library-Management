@@ -111,9 +111,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                     <td class="center"><?php echo htmlentities($result->CategoryName); ?></td>
                                                     <td class="center">
                                                         <?php if ($result->Status == 1) { ?>
-                                                            <a href="#" class="btn btn-success btn-xs">Active</a>
+                                                            <a href="#" class="btn btn-success btn-xs">Hoạt động</a>
                                                         <?php } else { ?>
-                                                            <a href="#" class="btn btn-danger btn-xs">Inactive</a>
+                                                            <a href="#" class="btn btn-danger btn-xs">Ngưng hoạt động</a>
                                                         <?php } ?>
                                                     </td>
                                                     <td class="center"><?php echo htmlentities($result->CreationDate); ?></td>
@@ -122,7 +122,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                         <a href="edit-category.php?catid=<?php echo htmlentities($result->id); ?>">
                                                             <button class="btn btn-primary"><i class="fa fa-edit"></i> Sửa</button>
                                                         </a>
-                                                        <a href="manage-categories.php?del=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Are you sure you want to delete?');">
+                                                        <a href="manage-categories.php?del=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Xác nhận xóa sách?');">
                                                             <button class="btn btn-danger"><i class="fa fa-pencil"></i> Xoá</button>
                                                         </a>
                                                     </td>

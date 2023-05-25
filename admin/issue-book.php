@@ -35,7 +35,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System | Issue a new Book</title>
+    <title>Hệ thống quản lý thư viện | Thêm phiếu mượn</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -89,32 +89,32 @@ if (strlen($_SESSION['alogin']) == 0) {
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-                    <h4 class="header-line">Issue a New Book</h4>
+                    <h4 class="header-line">Thêm phiếu mượn</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-10 col-sm-6 col-xs-12 col-md-offset-1">
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            Issue a New Book
+                            Thêm phiếu mượn
                         </div>
                         <div class="panel-body">
                             <form role="form" method="post">
                                 <div class="form-group">
-                                    <label>Student ID<span style="color:red;">*</span></label>
+                                    <label>ID học sinh<span style="color:red;">*</span></label>
                                     <input class="form-control" type="text" name="studentid" id="studentid" onBlur="getstudent()" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
                                     <span id="get_student_name" style="font-size:16px;"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label>ISBN Number or Book Title<span style="color:red;">*</span></label>
+                                    <label>Mã ISBN hoặc Tên sách<span style="color:red;">*</span></label>
                                     <input class="form-control" type="text" name="bookid" id="bookid" onBlur="getbook()" required="required" />
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="bookdetails" id="get_book_name" readonly></select>
                                 </div>
-                                <button type="submit" name="issue" id="submit" class="btn btn-info">Issue Book</button>
+                                <button type="submit" name="issue" id="submit" class="btn btn-info">Mượn sách</button>
                             </form>
                         </div>
                     </div>
