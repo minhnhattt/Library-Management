@@ -29,7 +29,7 @@ if(isset($_POST['signup']))
     $lastInsertId = $dbh->lastInsertId();
     if($lastInsertId)
     {
-        echo '<script>alert("Đăng ký thành công. Mã sinh viên của bạn là '.$StudentId.'")</script>';
+        echo '<script>alert("Đăng ký thành công. Mã của bạn là '.$StudentId.'")</script>';
     }
     else 
     {
