@@ -48,7 +48,7 @@ if(isset($_POST['signup']))
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>Hệ thống Quản lý Thư viện Trực tuyến | Đăng ký Sinh viên</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Đăng ký Đọc giả</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
