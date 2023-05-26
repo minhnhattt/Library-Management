@@ -104,7 +104,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                     <td class="center">
                                                         <?php
                                                         if ($result->ReturnDate == "") {
-                                                            echo htmlentities("Not Return Yet");
+                                                            echo htmlentities("Chưa trả");
                                                         } else {
                                                             echo htmlentities($result->ReturnDate);
                                                         }
