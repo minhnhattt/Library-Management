@@ -116,7 +116,7 @@ header('location:manage-authors.php');
                                          
                                             <th>Ngày thêm</th>
                                             <th>Ngày sửa gần nhất</th>
-                                            <th>Chức năng</th>
+                                            <!-- <th>Chức năng</th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -136,8 +136,8 @@ foreach($results as $result)
                                             <td class="center"><?php echo htmlentities($result->UpdationDate);?></td>
                                             <td class="center">
 
-                                            <a href="edit-author.php?athrid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Sửa</button> 
-                                          <a href="manage-authors.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Xoá</button>
+                                            <!-- <a href="edit-author.php?athrid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Sửa</button> 
+                                          <a href="manage-authors.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Xoá</button> -->
                                             </td>
                                         </tr>
  <?php $cnt=$cnt+1;}} ?>                                      

@@ -28,6 +28,7 @@ if(isset($_POST['signup']))
         echo '<script>alert("Your Registration is successful!")</script>';
         header("Location: index.php");
 
+        echo '<script>alert("Đăng ký thành công. Mã của bạn là '.$StudentId.'")</script>';
     }
     else 
     {
