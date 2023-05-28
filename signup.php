@@ -3,12 +3,12 @@ session_start();
 include('includes/config.php');
 error_reporting(0);
 
-if(isset($_POST['signup']))
-{
-    $fname = $_POST['fullanme'];
+
+if (isset($_POST['signup'])) {
+    $fname = $_POST['fullname'];
     $mobileno = $_POST['mobileno'];
-    $email = $_POST['email']; 
-    $password = md5($_POST['password']); 
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
     $status = 1;
 
     $sql = "INSERT INTO tblstudents(FullName, MobileNumber, EmailId, Password, Status) 
@@ -20,21 +20,28 @@ if(isset($_POST['signup']))
     $query->bindParam(':password', $password, PDO::PARAM_STR);
     $query->bindParam(':status', $status, PDO::PARAM_STR);
     $query->execute();
-
     $lastInsertId = $dbh->lastInsertId();
 
-    if($lastInsertId)
-    {
-        echo '<script>alert("Your Registration is successful!")</script>';
-        header("Location: index.php");
-
-        echo '<script>alert("Đăng ký thành công. Mã của bạn là '.$StudentId.'")</script>';
-    }
-    else 
-    {
-        echo "<script>alert('Something went wrong. Please try again');</script>";
+    if ($lastInsertId) {
+        $studentId = 'SID' . str_pad($lastInsertId, 3, '0', STR_PAD_LEFT);
+        
+        // Cập nhật StudentId vào bản ghi mới tạo
+        $sql = "UPDATE tblstudents SET StudentId = :studentId WHERE StudentId = ''";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':studentId', $studentId, PDO::PARAM_STR);
+        $query->execute();
+        
+        echo "<script>alert('Đăng ký thành công! Mã user của bạn là " . $studentId . "');</script>";
+        echo "<br><a href='index.php'>Quay lại trang chủ</a></br>";
+        exit;
+    } else {
+        echo "<script>alert('Đăng ký thất bại, Vui lòng thử lại');</script>";
     }
 }
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +54,7 @@ if(isset($_POST['signup']))
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>Online Library Management System | Student Signup</title>
+    <title>Hệ thống quản lý thư viện | Đăng ký người dùng</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -59,7 +66,7 @@ if(isset($_POST['signup']))
     <script type="text/javascript">
         function validateForm() {
             if (document.signup.password.value !== document.signup.confirmpassword.value) {
-                alert("Password and Confirm Password fields do not match!");
+                alert("Mật khẩu và mật khẩu xác nhận không trùng khớp!");
                 document.signup.confirmpassword.focus();
                 return false;
             }
@@ -75,38 +82,38 @@ if(isset($_POST['signup']))
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-                    <h4 class="header-line">User Signup</h4>
+                    <h4 class="header-line">Đăng ký người dùng</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-9 col-md-offset-1">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-                            SIGNUP FORM
+                            ĐĂNG KÝ
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onsubmit="return validateForm();">
                                 <div class="form-group">
-                                    <label>Enter Full Name</label>
-                                    <input class="form-control" type="text" name="fullanme" autocomplete="off" required />
+                                    <label>Nhập tên người dùng</label>
+                                    <input class="form-control" type="text" name="fullname" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Mobile Number:</label>
+                                    <label>Số điện thoại:</label>
                                     <input class="form-control" type="text" name="mobileno" maxlength="10" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Enter Email</label>
+                                    <label>Nhập địa chỉ Email</label>
                                     <input class="form-control" type="email" name="email" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Enter Password</label>
+                                    <label>Nhập mật khẩu</label>
                                     <input class="form-control" type="password" name="password" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
-                                    <label>Confirm Password</label>
+                                    <label>Xác nhận mật khẩu</label>
                                     <input class="form-control" type="password" name="confirmpassword" autocomplete="off" required />
                                 </div>
-                                <button type="submit" name="signup" class="btn btn-danger" id="submit">Register Now</button>
+                                <button type="submit" name="signup" class="btn btn-danger" id="submit">ĐĂNG KÝ</button>
                             </form>
                         </div>
                     </div>
