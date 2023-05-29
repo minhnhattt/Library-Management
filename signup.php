@@ -32,7 +32,7 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if ($lastInsertId) {
     echo '<script>alert("Your Registration successful and your student id is " + "' . $StudentId . '")</script>';
-    header("Location: index.php"); // Redirect to index.php
+    header("Location:index.php"); // Redirect to index.php
     exit(); // Stop further execution of the script
 } else {
     echo "<script>alert('Something went wrong. Please try again');</script>";
