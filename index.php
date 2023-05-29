@@ -3,11 +3,11 @@ session_start();
 error_reporting(0);
 include('includes/config.php');
 
-if($_SESSION['login'] != ''){
+if ($_SESSION['login'] != '') {
     $_SESSION['login'] = '';
 }
 
-if(isset($_POST['login'])) {
+if (isset($_POST['login'])) {
     $email = $_POST['emailid'];
     $password = md5($_POST['password']);
 
@@ -18,10 +18,10 @@ if(isset($_POST['login'])) {
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_OBJ);
 
-    if($query->rowCount() > 0) {
+    if ($query->rowCount() > 0) {
         foreach ($results as $result) {
             $_SESSION['stdid'] = $result->StudentId;
-            if($result->Status == 1) {
+            if ($result->Status == 1) {
                 $_SESSION['login'] = $_POST['emailid'];
                 echo "<script type='text/javascript'> document.location ='dashboard.php'; </script>";
             } else {
@@ -36,6 +36,7 @@ if(isset($_POST['login'])) {
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -51,9 +52,10 @@ if(isset($_POST['login'])) {
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
+
 <body>
     <!------MENU SECTION START-->
-    <?php include('includes/header.php');?>
+    <?php include('includes/header.php'); ?>
     <!-- MENU SECTION END-->
     <div class="content-wrapper">
         <div class="container">
@@ -62,10 +64,10 @@ if(isset($_POST['login'])) {
                     <h4 class="header-line">NGƯỜI DÙNG ĐĂNG NHẬP</h4>
                 </div>
             </div>
-             
-            <!--LOGIN PANEL START-->           
+
+            <!--LOGIN PANEL START-->
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" >
+                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             ĐĂNG NHẬP
@@ -74,24 +76,27 @@ if(isset($_POST['login'])) {
                             <form role="form" method="post">
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input class="form-control" type="text" name="emailid" required autocomplete="off" />
+                                    <input class="form-control" type="text" name="emailid" required
+                                        autocomplete="off" />
                                 </div>
                                 <div class="form-group">
                                     <label>Mật khẩu</label>
-                                    <input class="form-control" type="password" name="password" required autocomplete="off"  />
+                                    <input class="form-control" type="password" name="password" required
+                                        autocomplete="off" />
                                     <p class="help-block"><a href="user-forgot-password.php">Quên mật khẩu</a></p>
                                 </div>
-                                <button type="submit" name="login" class="btn btn-info">ĐĂNG NHẬP</button> | <a href="signup.php">Chưa có tài khoản</a>
+                                <button type="submit" name="login" class="btn btn-info">ĐĂNG NHẬP</button> | <a
+                                    href="signup.php">Chưa có tài khoản</a>
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>  
-            <!---LOGIN PANEL END-->            
+            </div>
+            <!---LOGIN PANEL END-->
         </div>
     </div>
     <!-- CONTENT-WRAPPER SECTION END-->
-    <?php include('includes/footer.php');?>
+    <?php include('includes/footer.php'); ?>
     <!-- FOOTER SECTION END-->
     <script src="assets/js/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS  -->
@@ -99,4 +104,5 @@ if(isset($_POST['login'])) {
     <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/custom.js"></script>
 </body>
+
 </html>
