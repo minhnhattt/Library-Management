@@ -52,7 +52,7 @@ if ($lastInsertId) {
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>Online Library Management System | Student Signup</title>
+    <title>WEB QUẢN LÝ THƯ VIỆN | ĐĂNG KÝ</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -98,7 +98,7 @@ error:function (){}
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">User Signup</h4>
+                <h4 class="header-line">HỌC SINH ĐĂNG KÝ</h4>
                 
                             </div>
 
@@ -108,13 +108,13 @@ error:function (){}
 <div class="col-md-9 col-md-offset-1">
                <div class="panel panel-danger">
                         <div class="panel-heading">
-                           SINGUP FORM
+                           ĐĂNG KÝ
                         </div>
                         <div class="panel-body">
                             <form name="signup" method="post" onSubmit="return valid();">
 <div class="form-group">
-<label>Enter Full Name</label>
-<input class="form-control" type="text" name="fullanme" autocomplete="off" required />
+<label>HỌ VÀ TÊN</label>
+<input class="form-control" type="text"  name="fullanme" autocomplete="off" required  />
 </div>
 
 
