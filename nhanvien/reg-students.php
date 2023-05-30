@@ -80,7 +80,7 @@ header('location:reg-students.php');
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <table class="table table-striped table-bordered table-hover"   >
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -91,6 +91,8 @@ header('location:reg-students.php');
                                             <th>Ngày tạo</th>
                                             <th>Trạng thái</th>
                                             <th>Chức năng</th>
+                             
+                             
                                         </tr>
                                     </thead>
                                     <tbody>
