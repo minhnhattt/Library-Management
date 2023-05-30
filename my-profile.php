@@ -10,7 +10,7 @@ if (strlen($_SESSION['login']) == 0) {
         $fname = $_POST['fullanme'];
         $mobileno = $_POST['mobileno'];
 
-        $sql = "update tblstudents set FullName=:fname,MobileNumber=:mobileno where StudentId=:sid";
+        $sql = "update tbluser set FullName=:fname,MobileNumber=:mobileno where UserId=:sid";
         $query = $dbh->prepare($sql);
         $query->bindParam(':sid', $sid, PDO::PARAM_STR);
         $query->bindParam(':fname', $fname, PDO::PARAM_STR);
@@ -69,7 +69,7 @@ if (strlen($_SESSION['login']) == 0) {
                                 <form name="signup" method="post">
                                     <?php
                                     $sid = $_SESSION['stdid'];
-                                    $sql = "SELECT StudentId,FullName,EmailId,MobileNumber,RegDate,UpdationDate,Status from  tblstudents  where StudentId=:sid ";
+                                    $sql = "SELECT UserId,FullName,EmailId,MobileNumber,RegDate,UpdationDate,Status from  tbluser  where UserId=:sid ";
                                     $query = $dbh->prepare($sql);
                                     $query->bindParam(':sid', $sid, PDO::PARAM_STR);
                                     $query->execute();
@@ -80,7 +80,7 @@ if (strlen($_SESSION['login']) == 0) {
 
                                             <div class="form-group">
                                                 <label>ID Đọc giả: </label>
-                                                <?php echo htmlentities($result->StudentId); ?>
+                                                <?php echo htmlentities($result->UserId); ?>
                                             </div>
 
                                             <div class="form-group">

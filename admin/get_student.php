@@ -1,12 +1,12 @@
 <?php
 require_once("includes/config.php");
 
-if (!empty($_POST["studentid"])) {
-    $studentid = strtoupper($_POST["studentid"]);
+if (!empty($_POST["UserId"])) {
+    $UserId = strtoupper($_POST["UserId"]);
 
-    $sql = "SELECT FullName, Status FROM tblstudents WHERE StudentId=:studentid";
+    $sql = "SELECT FullName, Status FROM tbluser WHERE UserId=:UserId";
     $query = $dbh->prepare($sql);
-    $query->bindParam(':studentid', $studentid, PDO::PARAM_STR);
+    $query->bindParam(':UserId', $UserId, PDO::PARAM_STR);
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_OBJ);
     $cnt = 1;

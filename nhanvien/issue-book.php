@@ -10,11 +10,11 @@ else{
 
 if(isset($_POST['issue']))
 {
-$studentid=strtoupper($_POST['studentid']);
+$UserId=strtoupper($_POST['UserId']);
 $bookid=$_POST['bookdetails'];
-$sql="INSERT INTO  tblissuedbookdetails(StudentID,BookId) VALUES(:studentid,:bookid)";
+$sql="INSERT INTO  tblissuedbookdetails(UserId,BookId) VALUES(:UserId,:bookid)";
 $query = $dbh->prepare($sql);
-$query->bindParam(':studentid',$studentid,PDO::PARAM_STR);
+$query->bindParam(':UserId',$UserId,PDO::PARAM_STR);
 $query->bindParam(':bookid',$bookid,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
@@ -38,7 +38,7 @@ header('location:manage-issued-books.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System | Issue a new Book</title>
+    <title>Online Library Management System | THÊM PHIẾU MƯỢN</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -53,7 +53,7 @@ function getstudent() {
 $("#loaderIcon").show();
 jQuery.ajax({
 url: "get_student.php",
-data:'studentid='+$("#studentid").val(),
+data:'UserId='+$("#UserId").val(),
 type: "POST",
 success:function(data){
 $("#get_student_name").html(data);
@@ -97,7 +97,7 @@ error:function (){}
          <div class="container">
         <div class="row pad-botm">
             <div class="col-md-12">
-                <h4 class="header-line">Issue a New Book</h4>
+                <h4 class="header-line">THÊM PHIẾU MƯỢN</h4>
                 
                             </div>
 
@@ -106,14 +106,14 @@ error:function (){}
 <div class="col-md-10 col-sm-6 col-xs-12 col-md-offset-1"">
 <div class="panel panel-info">
 <div class="panel-heading">
-Issue a New Book
+THÊM PHIẾU MƯỢN
 </div>
 <div class="panel-body">
 <form role="form" method="post">
 
 <div class="form-group">
-<label>Srtudent id<span style="color:red;">*</span></label>
-<input class="form-control" type="text" name="studentid" id="studentid" onBlur="getstudent()" autocomplete="off"  required />
+<label>Mã đọc giả<span style="color:red;">*</span></label>
+<input class="form-control" type="text" name="UserId" id="UserId" onBlur="getstudent()" autocomplete="off"  required />
 </div>
 
 <div class="form-group">
@@ -125,7 +125,7 @@ Issue a New Book
 
 
 <div class="form-group">
-<label>ISBN Number or Book Title<span style="color:red;">*</span></label>
+<label>Mã ISBN hoặc tên sách<span style="color:red;">*</span></label>
 <input class="form-control" type="text" name="booikid" id="bookid" onBlur="getbook()"  required="required" />
 </div>
 
@@ -135,7 +135,7 @@ Issue a New Book
    
  </select>
  </div>
-<button type="submit" name="issue" id="submit" class="btn btn-info">Issue Book </button>
+<button type="submit" name="issue" id="submit" class="btn btn-info">Mượn sách </button>
 
                                     </form>
                             </div>

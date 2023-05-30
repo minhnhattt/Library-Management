@@ -8,11 +8,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 } else {
 
     if (isset($_POST['issue'])) {
-        $studentid = strtoupper($_POST['studentid']);
+        $UserId = strtoupper($_POST['UserId']);
         $bookid = $_POST['bookdetails'];
-        $sql = "INSERT INTO tblissuedbookdetails(StudentID,BookId) VALUES(:studentid,:bookid)";
+        $sql = "INSERT INTO tblissuedbookdetails(UserId,BookId) VALUES(:UserId,:bookid)";
         $query = $dbh->prepare($sql);
-        $query->bindParam(':studentid', $studentid, PDO::PARAM_STR);
+        $query->bindParam(':UserId', $UserId, PDO::PARAM_STR);
         $query->bindParam(':bookid', $bookid, PDO::PARAM_STR);
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
@@ -50,7 +50,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             $("#loaderIcon").show();
             jQuery.ajax({
                 url: "get_student.php",
-                data: 'studentid=' + $("#studentid").val(),
+                data: 'UserId=' + $("#UserId").val(),
                 type: "POST",
                 success: function (data) {
                     $("#get_student_name").html(data);
@@ -101,8 +101,8 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <div class="panel-body">
                             <form role="form" method="post">
                                 <div class="form-group">
-                                    <label>ID học sinh<span style="color:red;">*</span></label>
-                                    <input class="form-control" type="text" name="studentid" id="studentid" onBlur="getstudent()" autocomplete="off" required />
+                                    <label>Mã độc giả<span style="color:red;">*</span></label>
+                                    <input class="form-control" type="text" name="UserId" id="UserId" onBlur="getstudent()" autocomplete="off" required />
                                 </div>
                                 <div class="form-group">
                                     <span id="get_student_name" style="font-size:16px;"></span>

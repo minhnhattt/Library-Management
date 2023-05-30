@@ -73,7 +73,7 @@ else{
                                         <tbody>
                                             <?php 
                                                 $sid=$_SESSION['stdid'];
-                                                $sql="SELECT tblbooks.BookName,tblbooks.ISBNNumber,tblissuedbookdetails.IssuesDate,tblissuedbookdetails.ReturnDate,tblissuedbookdetails.id as rid,tblissuedbookdetails.fine from  tblissuedbookdetails join tblstudents on tblstudents.StudentId=tblissuedbookdetails.StudentId join tblbooks on tblbooks.id=tblissuedbookdetails.BookId where tblstudents.StudentId=:sid order by tblissuedbookdetails.id desc";
+                                                $sql="SELECT tblbooks.BookName,tblbooks.ISBNNumber,tblissuedbookdetails.IssuesDate,tblissuedbookdetails.ReturnDate,tblissuedbookdetails.id as rid,tblissuedbookdetails.fine from  tblissuedbookdetails join tbluser on tbluser.UserId=tblissuedbookdetails.UserId join tblbooks on tblbooks.id=tblissuedbookdetails.BookId where tbluser.UserId=:sid order by tblissuedbookdetails.id desc";
                                                 $query = $dbh -> prepare($sql);
                                                 $query-> bindParam(':sid', $sid, PDO::PARAM_STR);
                                                 $query->execute();

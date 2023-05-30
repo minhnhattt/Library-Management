@@ -91,7 +91,7 @@ else{
                     <div class="alert alert-danger back-widget-set text-center">
                         <i class="fa fa-users fa-5x"></i>
                         <?php 
-                        $sql3 ="SELECT id from tblstudents ";
+                        $sql3 ="SELECT id from tbluser ";
                         $query3 = $dbh->prepare($sql1);
                         $query3->execute();
                         $results3=$query3->fetchAll(PDO::FETCH_OBJ);

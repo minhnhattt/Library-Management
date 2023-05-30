@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
     $email = $_POST['emailid'];
     $password = md5($_POST['password']);
 
-    $sql = "SELECT EmailId, Password, StudentId, Status FROM tblstudents WHERE EmailId=:email AND Password=:password";
+    $sql = "SELECT EmailId, Password, UserId, Status FROM tbluser WHERE EmailId=:email AND Password=:password";
     $query = $dbh->prepare($sql);
     $query->bindParam(':email', $email, PDO::PARAM_STR);
     $query->bindParam(':password', $password, PDO::PARAM_STR);
@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
 
     if ($query->rowCount() > 0) {
         foreach ($results as $result) {
-            $_SESSION['stdid'] = $result->StudentId;
+            $_SESSION['stdid'] = $result->UserId;
             if ($result->Status == 1) {
                 $_SESSION['login'] = $_POST['emailid'];
                 echo "<script type='text/javascript'> document.location ='dashboard.php'; </script>";

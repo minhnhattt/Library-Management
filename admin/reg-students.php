@@ -11,7 +11,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     if (isset($_GET['inid'])) {
         $id = $_GET['inid'];
         $status = 0;
-        $sql = "update tblstudents set Status=:status WHERE id=:id";
+        $sql = "update tbluser set Status=:status WHERE id=:id";
         $query = $dbh->prepare($sql);
         $query->bindParam(':id', $id, PDO::PARAM_STR);
         $query->bindParam(':status', $status, PDO::PARAM_STR);
@@ -23,7 +23,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $status = 1;
-        $sql = "update tblstudents set Status=:status WHERE id=:id";
+        $sql = "update tbluser set Status=:status WHERE id=:id";
         $query = $dbh->prepare($sql);
         $query->bindParam(':id', $id, PDO::PARAM_STR);
         $query->bindParam(':status', $status, PDO::PARAM_STR);
@@ -84,7 +84,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $sql = "SELECT * from tblstudents";
+                                        $sql = "SELECT * from tbluser";
                                         $query = $dbh->prepare($sql);
                                         $query->execute();
                                         $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -94,7 +94,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         ?>
                                                 <tr class="odd gradeX">
                                                     <td class="center"><?php echo htmlentities($cnt); ?></td>
-                                                    <td class="center"><?php echo htmlentities($result->StudentId); ?></td>
+                                                    <td class="center"><?php echo htmlentities($result->UserId); ?></td>
                                                     <td class="center"><?php echo htmlentities($result->FullName); ?></td>
                                                     <td class="center"><?php echo htmlentities($result->EmailId); ?></td>
                                                     <td class="center"><?php echo htmlentities($result->MobileNumber); ?></td>

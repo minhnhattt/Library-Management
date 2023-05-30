@@ -46,7 +46,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         $("#loaderIcon").show();
         jQuery.ajax({
             url: "get_student.php",
-            data: 'studentid=' + $("#studentid").val(),
+            data: 'UserId=' + $("#UserId").val(),
             type: "POST",
             success: function(data) {
                 $("#get_student_name").html(data);
@@ -98,9 +98,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                             <form role="form" method="post">
                                 <?php
                                 $rid = intval($_GET['rid']);
-                                $sql = "SELECT tblstudents.FullName, tblbooks.BookName, tblbooks.ISBNNumber, tblissuedbookdetails.IssuesDate, tblissuedbookdetails.ReturnDate, tblissuedbookdetails.id as rid, tblissuedbookdetails.fine, tblissuedbookdetails.RetrunStatus
+                                $sql = "SELECT tbluser.FullName, tblbooks.BookName, tblbooks.ISBNNumber, tblissuedbookdetails.IssuesDate, tblissuedbookdetails.ReturnDate, tblissuedbookdetails.id as rid, tblissuedbookdetails.fine, tblissuedbookdetails.RetrunStatus
                                 FROM tblissuedbookdetails
-                                JOIN tblstudents ON tblstudents.StudentId = tblissuedbookdetails.StudentId
+                                JOIN tbluser ON tbluser.UserId = tblissuedbookdetails.UserId
                                 JOIN tblbooks ON tblbooks.id = tblissuedbookdetails.BookId
                                 WHERE tblissuedbookdetails.id=:rid";
                                 $query = $dbh->prepare($sql);
