@@ -135,7 +135,7 @@ error:function (){}
 </div>
 
 <div class="form-group">
-<label>Confirm Password </label>
+<label>Xác nhận Password </label>
 <input class="form-control"  type="password" name="confirmpassword" autocomplete="off" required  />
 </div>
                             
