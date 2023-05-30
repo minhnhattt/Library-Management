@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
 
     if ($query->rowCount() > 0) {
         $_SESSION['alogin'] = $_POST['username'];
-        echo "<script type='text/javascript'> document.location ='nhanvien/dashboard.php'; </script>";
+        echo "<script type='text/javascript'> document.location ='nhanvien/dashboardgut.php'; </script>";
     } else {
         echo "<script>alert('Thông tin không hợp lệ');</script>";
     }
