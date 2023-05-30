@@ -21,7 +21,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             header('location:manage-authors.php');
         }
     }
-}
+}   
 ?>
 
 <!DOCTYPE html>

@@ -25,7 +25,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Quản lý Danh mục</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Quản lý Thể loại</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -45,7 +45,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <div class="container">
             <div class="row pad-botm">
                 <div class="col-md-12">
-                    <h4 class="header-line">Quản lý Danh mục sách</h4>
+                    <h4 class="header-line">Quản lý Thể loại sách</h4>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -81,7 +81,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Quản lý danh mục
+                            Quản lý Thể loại
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -89,7 +89,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Tên danh mục</th>
+                                            <th>Tên Thể loại</th>
                                             <th>Trạng thái</th>
                                             <th>Ngày thêm</th>
                                             <th>Ngày sửa</th>

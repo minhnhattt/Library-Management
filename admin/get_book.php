@@ -22,7 +22,7 @@ if (!empty($_POST["bookid"])) {
         }
     } else {
         ?>
-        <option class="others">Invalid ISBN Number</option>
+        <option class="others">Mã số ISBN không hợp lệ.</option>
         <?php
         echo "<script>$('#submit').prop('disabled',true);</script>";
     }

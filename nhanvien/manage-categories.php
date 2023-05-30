@@ -28,7 +28,7 @@ header('location:manage-categories.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Quản lý Danh mục</title>
+    <title>HỆ THỐNG QUẢN LÝ THƯ VIỆN | Quản lý Thể loại</title>
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -50,7 +50,7 @@ header('location:manage-categories.php');
         <div class="row pad-botm">
             <div class="col-md-12">
 
-                <h4 class="header-line">Quản lý Danh mục sách</h4>
+                <h4 class="header-line">Quản lý Thể loại sách</h4>
 
     </div>
      <div class="row">
@@ -107,7 +107,7 @@ header('location:manage-categories.php');
                     <div class="panel panel-default">
                         <div class="panel-heading">
 
-                           Quản lý danh mục
+                           Quản lý thể loại
 
                         </div>
                         <div class="panel-body">
@@ -116,11 +116,11 @@ header('location:manage-categories.php');
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Tên danh mục</th>
+                                            <th>Tên thể loại</th>
                                             <th>Trạng thái</th>
                                             <th>Ngày thêm</th>
                                             <th>Ngày sửa</th>
-                                            <th>Chức năng</th>
+                                            <!-- <th>Chức năng</th> -->
 
                                         </tr>
                                     </thead>
@@ -144,11 +144,11 @@ foreach($results as $result)
                                             <?php } ?></td>
                                             <td class="center"><?php echo htmlentities($result->CreationDate);?></td>
                                             <td class="center"><?php echo htmlentities($result->UpdationDate);?></td>
-                                            <td class="center">
+                                            <!-- <td class="center">
 
                                             <a href="edit-category.php?catid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Sửa</button> 
                                           <a href="manage-categories.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Xoá</button>
-                                            </td>
+                                            </td> -->
                                         </tr>
  <?php $cnt=$cnt+1;}} ?>                                      
                                     </tbody>

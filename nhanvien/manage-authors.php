@@ -134,11 +134,11 @@ foreach($results as $result)
                                             <td class="center"><?php echo htmlentities($result->AuthorName);?></td>
                                             <td class="center"><?php echo htmlentities($result->creationDate);?></td>
                                             <td class="center"><?php echo htmlentities($result->UpdationDate);?></td>
-                                            <td class="center">
+                                            <!-- <td class="center">
 
-                                            <!-- <a href="edit-author.php?athrid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Sửa</button> 
-                                          <a href="manage-authors.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Xoá</button> -->
-                                            </td>
+                                            <a href="edit-author.php?athrid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary"><i class="fa fa-edit "></i> Sửa</button> 
+                                          <a href="manage-authors.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to delete?');"" >  <button class="btn btn-danger"><i class="fa fa-pencil"></i> Xoá</button>
+                                            </td> -->
                                         </tr>
  <?php $cnt=$cnt+1;}} ?>                                      
                                     </tbody>

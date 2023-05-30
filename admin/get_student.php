@@ -23,7 +23,7 @@ if (!empty($_POST["studentid"])) {
             }
         }
     } else {
-        echo "<span style='color:red'> Invalid Student ID. Please Enter a Valid Student ID.</span>";
+        echo "<span style='color:red'>  Mã số sinh viên không hợp lệ. Vui lòng nhập một mã số sinh viên hợp lệ.</span>";
         echo "<script>$('#submit').prop('disabled',true);</script>";
     }
 }
