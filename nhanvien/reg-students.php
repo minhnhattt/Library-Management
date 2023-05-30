@@ -114,20 +114,20 @@ foreach($results as $result)
                                              <td class="center"><?php echo htmlentities($result->RegDate);?></td>
                                             <td class="center"><?php if($result->Status==1)
                                             {
-                                                echo htmlentities("Active");
+                                                echo htmlentities("Hoạt động");
                                             } else {
 
 
-                                            echo htmlentities("Blocked");
+                                            echo htmlentities("Chặn");
 }
                                             ?></td>
                                             <td class="center">
 <?php if($result->Status==1)
  {?>
-<a href="reg-students.php?inid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to block this student?');"" >  <button class="btn btn-danger"> Inactive</button>
+<a href="reg-students.php?inid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Xác nhận chặn người dùng này?');"" >  <button class="btn btn-danger"> Ngưng hoạt động</button>
 <?php } else {?>
 
-                                            <a href="reg-students.php?id=<?php echo htmlentities($result->id);?>" onclick="return confirm('Are you sure you want to active this student?');""><button class="btn btn-primary"> Active</button> 
+                                            <a href="reg-students.php?id=<?php echo htmlentities($result->id);?>" onclick="return confirm('Xác nhận bỏ chặn người dùng này?');""><button class="btn btn-primary"> Hoạt động</button> 
                                             <?php } ?>
                                           
                                             </td>

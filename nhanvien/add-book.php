@@ -133,7 +133,7 @@ if($query->rowCount() > 0)
 </div>
 
 <div class="form-group">
-<label>ISBN Number<span style="color:red;">*</span></label>
+<label>MÃ ISBN<span style="color:red;">*</span></label>
 <input class="form-control" type="text" name="isbn"  required="required" autocomplete="off"  />
 <p class="help-block">ISBN là Mã số Sách Tiêu chuẩn Quốc tế. ISBN phải là duy nhất.</p>
 </div>
